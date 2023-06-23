@@ -1,5 +1,4 @@
-<h2>New book</h2>
-  <%= form_with model: Book.new do |f| %>
+  <%= form_with model: Book.new, local: true do |f| %>
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -9,6 +8,6 @@
       <%= f.text_area :body %>
     </div>
     <div class="form-group">
-      <%= f.submit class: "btn btn-success" %>
+      <%= f.submit "Create Book", class: "btn btn-success" %>
     </div>
   <% end %>
